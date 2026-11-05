@@ -1,0 +1,143 @@
+main:focus {
+  outline: none;
+}
+
+.app-shell {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  padding: 0 clamp(24px, 6vw, 100px);
+  overflow: clip;
+  background: radial-gradient(ellipse at 83% 45%, #a000c40d, transparent 52%);
+}
+
+.app-shell::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: '';
+  pointer-events: none;
+  opacity: .2;
+  background-image: repeating-linear-gradient(0deg, transparent 0 3px, #f5f4e908 3px 4px);
+}
+
+.site-header,
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header {
+  min-height: 112px;
+  gap: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-decoration: none;
+}
+
+.brand img {
+  object-fit: contain;
+}
+
+.brand-subtitle {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: .29em;
+}
+
+.header-note {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-align: right;
+}
+
+.page-title {
+  margin: 0;
+  color: var(--member-name);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(70px, 7.8vw, 118px);
+  font-weight: 500;
+  line-height: .91;
+  letter-spacing: -.055em;
+}
+
+.title-period {
+  color: var(--member-card);
+}
+
+.page-motto {
+  margin: 30px 0 16px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 27px;
+  font-style: italic;
+}
+
+.site-footer {
+  gap: 32px;
+  min-height: 75px;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: .16em;
+}
+
+.archive-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.archive-status > span {
+  width: 5px;
+  height: 5px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #be65d0;
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    min-height: 90px;
+  }
+
+  .header-note {
+    max-width: 110px;
+    font-size: 9px;
+    line-height: 1.8;
+  }
+
+  .brand {
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  .brand-subtitle {
+    font-size: 9px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+    padding: 23px 0;
+    line-height: 1.6;
+  }
+}
