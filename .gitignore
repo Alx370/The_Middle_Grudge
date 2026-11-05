@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build output and caches
+dist/
+dist-ssr/
+.vite/
+.vite-temp/
+.cache/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+
+# Local environment variables
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# IDE and editor files
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+.history/
+*.swp
+*.swo
+*~
