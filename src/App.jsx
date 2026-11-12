@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import chainsOfLoyalty from './assets/LCB-Chains_of_Loyalty.webp'
+import theBookOfVengeance from '../public/The_Book_of_Vengeance.webp'
 import './styles/App.css'
 import Home from './pages/Home.jsx'
 import Archive from './pages/Archive.jsx'
@@ -22,18 +22,15 @@ function App() {
   }, [])
 
   useEffect(() => {
-    document.title = isArchive ? 'Grudge Archive — The Middle' : 'The Middle Grudge'
+    document.title = isArchive ? 'The Middle Archive' : 'The Middle Grudge'
   }, [isArchive])
 
   return (
     <div className="app-shell">
       <header className="site-header">
         <a className="brand" href="#/" aria-label="The Middle Grudge home">
-          <img src={chainsOfLoyalty} width="44" height="44" alt="" />
-          <span>
-            THE MIDDLE
+          <img src={theBookOfVengeance} width="44" height="44" alt="" />
             <span className="brand-subtitle">GRUDGE ARCHIVE</span>
-          </span>
         </a>
         <span className="header-note">A PROJECT MOON FAN PROJECT</span>
       </header>

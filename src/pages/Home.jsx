@@ -44,7 +44,7 @@ function Home() {
             <span className="card-rule" aria-hidden="true" />
           </figcaption>
         </figure>
-        <span className="display-caption">A NAME TO REMEMBER.</span>
+        <span className="display-caption">EVERYTHING FOR FAMILY.</span>
       </div>
     </>
   )
